@@ -14,20 +14,24 @@ public class ListaPreciosProducto {
     private String fecha;
 
     public ListaPreciosProducto(double precio, String fecha){
-        this.fecha = fecha;
+        this.fecha = fecha;//ponerle fecha de hoy
         this.precio = precio;
-    }
-    @Override
-    public String toString() {
-        return this.getPrecio()+" "+this.getFecha();
     }
 
     public double getPrecio() {
         return precio;
     }
 
+    public void setPrecio(double precio) {
+        this.precio = precio;
+    }
+
     public String getFecha() {
         return fecha;
     }
-    
+
+    public void setFecha(String fecha) {
+        this.fecha = fecha;
+    }
+
 }

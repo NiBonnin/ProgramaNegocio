@@ -11,9 +11,23 @@ package principal;
  */
 public class Producto {
     private String nombre, descripcion, fecha;
-    private double precio;
+    private double precio, costo;
     private int codigo, stock, codProveedor, rubro, subRubro;
 
+    public Producto(String nombre, String descripcion, double precio, double costo ,int stock, int codProveedor, int rubro, int subRubro) {
+        this.nombre = nombre;
+        this.descripcion = descripcion;
+        //this.fecha = fecha; ponerle fecha de hoy
+        this.precio = precio;
+        this.costo = costo;
+        this.stock = 0;
+        this.codProveedor = codProveedor;
+        this.rubro = rubro;
+        this.subRubro = subRubro;
+    }
+
+    
+    
     public String getNombre() {
         return nombre;
     }
@@ -44,6 +58,14 @@ public class Producto {
 
     public void setPrecio(double precio) {
         this.precio = precio;
+    }
+
+    public double getCosto() {
+        return costo;
+    }
+
+    public void setCosto(double costo) {
+        this.costo = costo;
     }
 
     public int getCodigo() {

@@ -10,10 +10,22 @@ package principal;
  * @author Nico
  */
 public class Cliente {
-    private String nombre, direccion, codigoPostal, telefono, cuit;
-    private int codigo;
+    private String nombre, direccion, telefono, cuit;
+    private int codigo, codigoPostal;
     private double saldo, deuda;
 
+    public Cliente(String nombre, String direccion, int codigoPostal, String telefono, String cuit) {
+        this.nombre = nombre;
+        this.direccion = direccion;
+        this.codigoPostal = codigoPostal;
+        this.telefono = telefono;
+        this.cuit = cuit;
+        this.saldo = 0;
+        this.deuda = 0;
+    }
+
+    
+    
     public String getNombre() {
         return nombre;
     }
@@ -30,11 +42,11 @@ public class Cliente {
         this.direccion = direccion;
     }
 
-    public String getCodigoPostal() {
+    public int getCodigoPostal() {
         return codigoPostal;
     }
 
-    public void setCodigoPostal(String codigoPostal) {
+    public void setCodigoPostal(int codigoPostal) {
         this.codigoPostal = codigoPostal;
     }
 
@@ -50,7 +62,7 @@ public class Cliente {
         return cuit;
     }
 
-    private void setCuit(String cuit) {
+    public void setCuit(String cuit) {
         this.cuit = cuit;
     }
 
@@ -58,7 +70,7 @@ public class Cliente {
         return codigo;
     }
 
-    public void setCodigo(int codigo) {
+    private void setCodigo(int codigo) {
         this.codigo = codigo;
     }
 

@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name="hibernatenormal.Cliente" table="CLIENTE">
+        <id name="codigo" column="codigo">
+            <generator class="identity" />
+        </id>
+        <property name="nombre" type="string"/>
+        <property name="direccion" type="string"/>
+        <property name="telefono" type="string"/>
+        <property name="cuit" type="string"/>
+        <property name="codigoPostal" type="int"/>
+        <property name="saldo" type="double"/>
+        <property name="deuda" type="double"/> 
+    </class>
+</hibernate-mapping>

@@ -1,5 +1,5 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
+/*//GEN-FIRST:event_formWindowActivated
+ * To change this license header, choose License Headers in Project Properties.//GEN-LAST:event_formWindowActivated
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
@@ -141,7 +141,7 @@ public class VPrincipal extends javax.swing.JFrame {
     };
     Boton button = new Boton();
     @SuppressWarnings("unchecked")
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">                          
     private void initComponents() {
 
         VistaListaProducto = new javax.swing.JFrame();
@@ -2109,203 +2109,203 @@ public class VPrincipal extends javax.swing.JFrame {
         );
 
         pack();
-    }// </editor-fold>//GEN-END:initComponents
+    }// </editor-fold>                        
 
-    private void jButtonListaArticulosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListaArticulosActionPerformed
+    private void jButtonListaArticulosActionPerformed(java.awt.event.ActionEvent evt) {                                                      
      VistaListaProducto.setVisible(true);
      button.listar(jTableListaProductos,modeloProductos,sentencia("Productos"));
-    }//GEN-LAST:event_jButtonListaArticulosActionPerformed
+    }                                                     
 
-    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirActionPerformed
+    private void jButtonSalirActionPerformed(java.awt.event.ActionEvent evt) {                                             
         System.exit(0);
-    }//GEN-LAST:event_jButtonSalirActionPerformed
+    }                                            
 
-    private void jBTSalirListaProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSalirListaProductosActionPerformed
+    private void jBTSalirListaProductosActionPerformed(java.awt.event.ActionEvent evt) {                                                       
         VistaListaProducto.setVisible(false);
-    }//GEN-LAST:event_jBTSalirListaProductosActionPerformed
+    }                                                      
 
-    private void jBTBuscarLProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTBuscarLProductosActionPerformed
+    private void jBTBuscarLProductosActionPerformed(java.awt.event.ActionEvent evt) {                                                    
         button.listar(jTableListaProductos,modeloProductos,sentencia("Productos"));
-    }//GEN-LAST:event_jBTBuscarLProductosActionPerformed
+    }                                                   
 
-    private void jBTAgregarProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarProductosActionPerformed
+    private void jBTAgregarProductosActionPerformed(java.awt.event.ActionEvent evt) {                                                    
         VistaAgregarProducto.setVisible(true);
         try {
             TFACodigoProducto.setText(button.ultimoCodigo("producto"));
         } catch (SQLException ex) {
             Logger.getLogger(VPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jBTAgregarProductosActionPerformed
+    }                                                   
 
-    private void jBTAgregarProductoAgregarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarProductoAgregarActionPerformed
+    private void jBTAgregarProductoAgregarActionPerformed(java.awt.event.ActionEvent evt) {                                                          
         if (hayUnCampoVacio("Producto")){JOptionPane.showMessageDialog(null, "Ups! Falto llenar un campo");} 
         else{
           button.agregarDatosATabla(jTableAgregarProducto,modeloAddProducto,TFANombreProducto.getText(),TFAPrecioProducto.getText(), TFACodigoProducto.getText(), TFAStockProducto.getText(), devolverCodProveedor(), TFARubroProducto.getText(),TFASubRubroProducto.getText(), TFADescripcionProducto.getText());
           limpiarTextAddProducto();
         }
-    }//GEN-LAST:event_jBTAgregarProductoAgregarActionPerformed
+    }                                                         
 
-    private void jButtonSalirVAddProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirVAddProductoActionPerformed
+    private void jButtonSalirVAddProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                         
         VistaAgregarProducto.setVisible(false);
-    }//GEN-LAST:event_jButtonSalirVAddProductoActionPerformed
+    }                                                        
 
-    private void jBTAgregarProveedorActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarProveedorActionPerformed
+    private void jBTAgregarProveedorActionPerformed(java.awt.event.ActionEvent evt) {                                                    
         if (hayUnCampoVacio("Proveedor")){JOptionPane.showMessageDialog(null, "Falto llenar un campo");} 
         else{
               button.agregarProveedor(TFANombreProveedor.getText(), TFADirProveedor.getText(), TFACPProveedor.getText(), TFATelProveedor.getText(), TFACuitProveedor.getText(), TFACodProveedor.getText());
               llenarCBNombreProveedor();
       }
-    }//GEN-LAST:event_jBTAgregarProveedorActionPerformed
+    }                                                   
 
-    private void jButtonListaProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListaProveedoresActionPerformed
+    private void jButtonListaProveedoresActionPerformed(java.awt.event.ActionEvent evt) {                                                        
         VistaListaProveedor.setVisible(true);
         button.listar(jTableListaProveedores,modeloProveedores,"SELECT CodProveedor, Nombre, Direccion, CodigoPostal, Telefono, Cuit FROM "+ BDProveedor);
-    }//GEN-LAST:event_jButtonListaProveedoresActionPerformed
+    }                                                       
 
-    private void jBTBuscarLProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTBuscarLProveedoresActionPerformed
+    private void jBTBuscarLProveedoresActionPerformed(java.awt.event.ActionEvent evt) {                                                      
         button.listar(jTableListaProveedores, modeloProveedores, sentencia("Proveedores"));
-    }//GEN-LAST:event_jBTBuscarLProveedoresActionPerformed
+    }                                                     
 
-    private void jBTSalirListaProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSalirListaProveedoresActionPerformed
+    private void jBTSalirListaProveedoresActionPerformed(java.awt.event.ActionEvent evt) {                                                         
         VistaListaProveedor.setVisible(false);
-    }//GEN-LAST:event_jBTSalirListaProveedoresActionPerformed
+    }                                                        
 
-    private void jBTAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarProveedoresActionPerformed
+    private void jBTAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {                                                      
         VistaAgregarProveedor.setVisible(true);
         try {
             TFACodProveedor.setText(button.ultimoCodigo("proveedor"));
         } catch (SQLException ex) {
             Logger.getLogger(VPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jBTAgregarProveedoresActionPerformed
+    }                                                     
 
-    private void jBTSalirAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSalirAgregarProveedoresActionPerformed
+    private void jBTSalirAgregarProveedoresActionPerformed(java.awt.event.ActionEvent evt) {                                                           
         VistaAgregarProveedor.setVisible(false);
-    }//GEN-LAST:event_jBTSalirAgregarProveedoresActionPerformed
+    }                                                          
 
-    private void jButtonListaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonListaClientesActionPerformed
+    private void jButtonListaClientesActionPerformed(java.awt.event.ActionEvent evt) {                                                     
         VistaListaCliente.setVisible(true);
         button.listar(jTableListaClientes, modeloClientes, sentencia("Clientes"));
-    }//GEN-LAST:event_jButtonListaClientesActionPerformed
+    }                                                    
 
-    private void jBTAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarClienteActionPerformed
+    private void jBTAgregarClienteActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         button.agregarCliente(TFANombreCliente.getText(), TFADirCliente.getText(), TFACPCliente.getText(), TFATelCliente.getText(), TFADniCliente.getText(), TFACodigoCliente.getText(), TFASaldoCliente.getText());
-    }//GEN-LAST:event_jBTAgregarClienteActionPerformed
+    }                                                 
 
-    private void jBTSalirAddClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSalirAddClienteActionPerformed
+    private void jBTSalirAddClienteActionPerformed(java.awt.event.ActionEvent evt) {                                                   
         VistaAgregarCliente.setVisible(false);
-    }//GEN-LAST:event_jBTSalirAddClienteActionPerformed
+    }                                                  
 
-    private void jBTBuscarLClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTBuscarLClientesActionPerformed
+    private void jBTBuscarLClientesActionPerformed(java.awt.event.ActionEvent evt) {                                                   
         button.listar(jTableListaClientes, modeloClientes, sentencia("Clientes"));
-    }//GEN-LAST:event_jBTBuscarLClientesActionPerformed
+    }                                                  
 
-    private void jBTSalirListaClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSalirListaClientesActionPerformed
+    private void jBTSalirListaClientesActionPerformed(java.awt.event.ActionEvent evt) {                                                      
         VistaListaCliente.setVisible(false);
-    }//GEN-LAST:event_jBTSalirListaClientesActionPerformed
+    }                                                     
 
-    private void jBTAgregarClientesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarClientesActionPerformed
+    private void jBTAgregarClientesActionPerformed(java.awt.event.ActionEvent evt) {                                                   
         VistaAgregarCliente.setVisible(true);
         try {
             TFACodigoCliente.setText(button.ultimoCodigo("cliente"));
         } catch (SQLException ex) {
             Logger.getLogger(VPrincipal.class.getName()).log(Level.SEVERE, null, ex);
         }
-    }//GEN-LAST:event_jBTAgregarClientesActionPerformed
+    }                                                  
 
-    private void TFLCodClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLCodClienteKeyPressed
+    private void TFLCodClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLCodClienteKeyPressed
+    }                                        
 
-    private void TFLNombreClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLNombreClienteKeyPressed
+    private void TFLNombreClienteKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLNombreClienteKeyPressed
+    }                                           
 
-    private void TFLDirClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLDirClienteKeyPressed
+    private void TFLDirClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLDirClienteKeyPressed
+    }                                        
 
-    private void TFLCPClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLCPClienteKeyPressed
+    private void TFLCPClienteKeyPressed(java.awt.event.KeyEvent evt) {                                        
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLCPClienteKeyPressed
+    }                                       
 
-    private void TFLTelClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLTelClienteKeyPressed
+    private void TFLTelClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLTelClienteKeyPressed
+    }                                        
 
-    private void TFLDNIClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLDNIClienteKeyPressed
+    private void TFLDNIClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLDNIClienteKeyPressed
+    }                                        
 
-    private void TFLSaldoClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLSaldoClienteKeyPressed
+    private void TFLSaldoClienteKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedListar(evt, "Cliente", VistaListaCliente);
-    }//GEN-LAST:event_TFLSaldoClienteKeyPressed
+    }                                          
 
-    private void TFLCodigoProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLCodigoProductoKeyPressed
+    private void TFLCodigoProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedListar(evt, "Producto", VistaListaProducto); 
-    }//GEN-LAST:event_TFLCodigoProductoKeyPressed
+    }                                            
 
-    private void TFLNombreProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLNombreProductoKeyPressed
+    private void TFLNombreProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLNombreProductoKeyPressed
+    }                                            
 
-    private void TFLDescripcionProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLDescripcionProductoKeyPressed
+    private void TFLDescripcionProductoKeyPressed(java.awt.event.KeyEvent evt) {                                                  
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLDescripcionProductoKeyPressed
+    }                                                 
 
-    private void TFLPrecioProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLPrecioProductoKeyPressed
+    private void TFLPrecioProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLPrecioProductoKeyPressed
+    }                                            
 
-    private void TFLStockProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLStockProductoKeyPressed
+    private void TFLStockProductoKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLStockProductoKeyPressed
+    }                                           
 
-    private void TFLFechaDiaProducto1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLFechaDiaProducto1KeyPressed
+    private void TFLFechaDiaProducto1KeyPressed(java.awt.event.KeyEvent evt) {                                                
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLFechaDiaProducto1KeyPressed
+    }                                               
 
-    private void TFLFechaMesProducto1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLFechaMesProducto1KeyPressed
+    private void TFLFechaMesProducto1KeyPressed(java.awt.event.KeyEvent evt) {                                                
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLFechaMesProducto1KeyPressed
+    }                                               
 
-    private void TFLFechaAñoProducto1KeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLFechaAñoProducto1KeyPressed
+    private void TFLFechaAñoProducto1KeyPressed(java.awt.event.KeyEvent evt) {                                                
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFLFechaAñoProducto1KeyPressed
+    }                                               
 
-    private void TFCodProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFCodProveedorKeyPressed
+    private void TFCodProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                          
         keyPressedListar(evt, "Producto", VistaListaProducto);
-    }//GEN-LAST:event_TFCodProveedorKeyPressed
+    }                                         
 
-    private void TFLCodProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLCodProveedorKeyPressed
+    private void TFLCodProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedListar(evt, "Proveedor", VistaListaProveedor);
-    }//GEN-LAST:event_TFLCodProveedorKeyPressed
+    }                                          
 
-    private void TFLNombreProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLNombreProveedorKeyPressed
+    private void TFLNombreProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                              
         keyPressedListar(evt, "Proveedor", VistaListaProveedor);
-    }//GEN-LAST:event_TFLNombreProveedorKeyPressed
+    }                                             
 
-    private void TFLDirProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLDirProveedorKeyPressed
+    private void TFLDirProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedListar(evt, "Proveedor", VistaListaProveedor);
-    }//GEN-LAST:event_TFLDirProveedorKeyPressed
+    }                                          
 
-    private void TFLCPProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLCPProveedorKeyPressed
+    private void TFLCPProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                          
         keyPressedListar(evt, "Proveedor", VistaListaProveedor);
-    }//GEN-LAST:event_TFLCPProveedorKeyPressed
+    }                                         
 
-    private void TFLTelProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLTelProveedorKeyPressed
+    private void TFLTelProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedListar(evt, "Proveedor", VistaListaProveedor);
-    }//GEN-LAST:event_TFLTelProveedorKeyPressed
+    }                                          
 
-    private void TFLCuitProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFLCuitProveedorKeyPressed
+    private void TFLCuitProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedListar(evt, "Proveedor", VistaListaProveedor);
-    }//GEN-LAST:event_TFLCuitProveedorKeyPressed
+    }                                           
 
-    private void VistaListaProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaListaProveedorKeyPressed
+    private void VistaListaProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedSalir(evt,VistaListaProveedor);        
-    }//GEN-LAST:event_VistaListaProveedorKeyPressed
+    }                                              
 
-    private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
+    private void formKeyPressed(java.awt.event.KeyEvent evt) {                                
         if(evt.getKeyCode() == evt.VK_ESCAPE) {//salir del sistema???
             if (JOptionPane.showConfirmDialog(rootPane, "¿Desea realmente salir de la aplicación?",
                 "Sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
@@ -2320,274 +2320,274 @@ public class VPrincipal extends javax.swing.JFrame {
                             }
                     }
             }
-    }//GEN-LAST:event_formKeyPressed
+    }                               
 
-    private void VistaListaProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaListaProductoKeyPressed
+    private void VistaListaProductoKeyPressed(java.awt.event.KeyEvent evt) {                                              
         keyPressedSalir(evt,VistaListaProducto);
-    }//GEN-LAST:event_VistaListaProductoKeyPressed
+    }                                             
 
-    private void VistaAgregarProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaAgregarProductoKeyPressed
+    private void VistaAgregarProductoKeyPressed(java.awt.event.KeyEvent evt) {                                                
         keyPressedSalir(evt,VistaAgregarProducto);
-    }//GEN-LAST:event_VistaAgregarProductoKeyPressed
+    }                                               
 
-    private void VistaAgregarProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaAgregarProveedorKeyPressed
+    private void VistaAgregarProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                                 
         keyPressedSalir(evt,VistaAgregarProveedor);
-    }//GEN-LAST:event_VistaAgregarProveedorKeyPressed
+    }                                                
 
-    private void VistaListaClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaListaClienteKeyPressed
+    private void VistaListaClienteKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedSalir(evt,VistaListaCliente);
-    }//GEN-LAST:event_VistaListaClienteKeyPressed
+    }                                            
 
-    private void VistaAgregarClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaAgregarClienteKeyPressed
+    private void VistaAgregarClienteKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedSalir(evt,VistaAgregarCliente);
-    }//GEN-LAST:event_VistaAgregarClienteKeyPressed
+    }                                              
 
-    private void formWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowActivated
+    private void formWindowActivated(java.awt.event.WindowEvent evt) {                                     
         this.requestFocus();
-    }//GEN-LAST:event_formWindowActivated
+    }                                    
 
-    private void VistaListaProductoWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaListaProductoWindowActivated
+    private void VistaListaProductoWindowActivated(java.awt.event.WindowEvent evt) {                                                   
         VistaListaProducto.requestFocus();
-    }//GEN-LAST:event_VistaListaProductoWindowActivated
+    }                                                  
 
-    private void VistaAgregarProductoWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaAgregarProductoWindowActivated
+    private void VistaAgregarProductoWindowActivated(java.awt.event.WindowEvent evt) {                                                     
         VistaAgregarProducto.requestFocus();
-    }//GEN-LAST:event_VistaAgregarProductoWindowActivated
+    }                                                    
 
-    private void VistaAgregarProveedorWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaAgregarProveedorWindowActivated
+    private void VistaAgregarProveedorWindowActivated(java.awt.event.WindowEvent evt) {                                                      
         VistaAgregarProveedor.requestFocus();
-    }//GEN-LAST:event_VistaAgregarProveedorWindowActivated
+    }                                                     
 
-    private void VistaListaProveedorWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaListaProveedorWindowActivated
+    private void VistaListaProveedorWindowActivated(java.awt.event.WindowEvent evt) {                                                    
         VistaListaProveedor.requestFocus();
-    }//GEN-LAST:event_VistaListaProveedorWindowActivated
+    }                                                   
 
-    private void VistaListaClienteWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaListaClienteWindowActivated
+    private void VistaListaClienteWindowActivated(java.awt.event.WindowEvent evt) {                                                  
         VistaListaCliente.requestFocus();
-    }//GEN-LAST:event_VistaListaClienteWindowActivated
+    }                                                 
 
-    private void VistaAgregarClienteWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaAgregarClienteWindowActivated
+    private void VistaAgregarClienteWindowActivated(java.awt.event.WindowEvent evt) {                                                    
         VistaAgregarCliente.requestFocus();
-    }//GEN-LAST:event_VistaAgregarClienteWindowActivated
+    }                                                   
 
-    private void jTableListaProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableListaProductosMouseClicked
+    private void jTableListaProductosMouseClicked(java.awt.event.MouseEvent evt) {                                                  
         if (evt.getClickCount() == 2) {
             String dato=String.valueOf(modeloProductos.getValueAt(jTableListaProductos.getSelectedRow(),0));
             button.vaciarTabla(jTableListaPrecioProducto, modeloPrecioProducto);
             cargarVistaProducto(dato);
             VistaProducto.setVisible(true);
         }
-    }//GEN-LAST:event_jTableListaProductosMouseClicked
+    }                                                 
 
-    private void jTableListaProductosKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTableListaProductosKeyPressed
+    private void jTableListaProductosKeyPressed(java.awt.event.KeyEvent evt) {                                                
         keyPressedSalir(evt, VistaListaProducto);
-    }//GEN-LAST:event_jTableListaProductosKeyPressed
+    }                                               
 
-    private void jTableListaProveedoresKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTableListaProveedoresKeyPressed
+    private void jTableListaProveedoresKeyPressed(java.awt.event.KeyEvent evt) {                                                  
         keyPressedSalir(evt, VistaListaProveedor);
-    }//GEN-LAST:event_jTableListaProveedoresKeyPressed
+    }                                                 
 
-    private void jTableListaClientesKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTableListaClientesKeyPressed
+    private void jTableListaClientesKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedSalir(evt, VistaListaCliente);
-    }//GEN-LAST:event_jTableListaClientesKeyPressed
+    }                                              
 
-    private void TFACodigoProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFACodigoProductoKeyPressed
+    private void TFACodigoProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFACodigoProductoKeyPressed
+    }                                            
 
-    private void TFANombreProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFANombreProductoKeyPressed
+    private void TFANombreProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFANombreProductoKeyPressed
+    }                                            
 
-    private void TFAPrecioProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFAPrecioProductoKeyPressed
+    private void TFAPrecioProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFAPrecioProductoKeyPressed
+    }                                            
 
-    private void TFAStockProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFAStockProductoKeyPressed
+    private void TFAStockProductoKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFAStockProductoKeyPressed
+    }                                           
 
-    private void TFARubroProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFARubroProductoKeyPressed
+    private void TFARubroProductoKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFARubroProductoKeyPressed
+    }                                           
 
-    private void TFASubRubroProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFASubRubroProductoKeyPressed
+    private void TFASubRubroProductoKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFASubRubroProductoKeyPressed
+    }                                              
 
-    private void TFADescripcionProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFADescripcionProductoKeyPressed
+    private void TFADescripcionProductoKeyPressed(java.awt.event.KeyEvent evt) {                                                  
         keyPressedSalir(evt, VistaAgregarProducto);
-    }//GEN-LAST:event_TFADescripcionProductoKeyPressed
+    }                                                 
 
-    private void TFACodProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFACodProveedorKeyPressed
+    private void TFACodProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedSalir(evt, VistaAgregarProveedor);
-    }//GEN-LAST:event_TFACodProveedorKeyPressed
+    }                                          
 
-    private void TFANombreProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFANombreProveedorKeyPressed
+    private void TFANombreProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                              
         keyPressedSalir(evt, VistaAgregarProveedor);
-    }//GEN-LAST:event_TFANombreProveedorKeyPressed
+    }                                             
 
-    private void TFADirProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFADirProveedorKeyPressed
+    private void TFADirProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedSalir(evt, VistaAgregarProveedor);
-    }//GEN-LAST:event_TFADirProveedorKeyPressed
+    }                                          
 
-    private void TFACPProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFACPProveedorKeyPressed
+    private void TFACPProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                          
         keyPressedSalir(evt, VistaAgregarProveedor);
-    }//GEN-LAST:event_TFACPProveedorKeyPressed
+    }                                         
 
-    private void TFATelProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFATelProveedorKeyPressed
+    private void TFATelProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedSalir(evt, VistaAgregarProveedor);
-    }//GEN-LAST:event_TFATelProveedorKeyPressed
+    }                                          
 
-    private void TFACuitProveedorKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFACuitProveedorKeyPressed
+    private void TFACuitProveedorKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedSalir(evt, VistaAgregarProveedor);
-    }//GEN-LAST:event_TFACuitProveedorKeyPressed
+    }                                           
 
-    private void TFACodigoClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFACodigoClienteKeyPressed
+    private void TFACodigoClienteKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFACodigoClienteKeyPressed
+    }                                           
 
-    private void TFANombreClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFANombreClienteKeyPressed
+    private void TFANombreClienteKeyPressed(java.awt.event.KeyEvent evt) {                                            
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFANombreClienteKeyPressed
+    }                                           
 
-    private void TFADirClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFADirClienteKeyPressed
+    private void TFADirClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFADirClienteKeyPressed
+    }                                        
 
-    private void TFACPClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFACPClienteKeyPressed
+    private void TFACPClienteKeyPressed(java.awt.event.KeyEvent evt) {                                        
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFACPClienteKeyPressed
+    }                                       
 
-    private void TFATelClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFATelClienteKeyPressed
+    private void TFATelClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFATelClienteKeyPressed
+    }                                        
 
-    private void TFADniClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFADniClienteKeyPressed
+    private void TFADniClienteKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFADniClienteKeyPressed
+    }                                        
 
-    private void TFASaldoClienteKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFASaldoClienteKeyPressed
+    private void TFASaldoClienteKeyPressed(java.awt.event.KeyEvent evt) {                                           
         keyPressedSalir(evt, VistaAgregarCliente);
-    }//GEN-LAST:event_TFASaldoClienteKeyPressed
+    }                                          
 
-    private void TFCambiarDatoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFCambiarDatoKeyPressed
+    private void TFCambiarDatoKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedSalir(evt,VistaCambiarDato);
         if(evt.getKeyCode() == evt.VK_ENTER) {
             cambiarDatoSingular(LabelCambiarDato.getText());
             VistaCambiarDato.setVisible(false);
         }
-    }//GEN-LAST:event_TFCambiarDatoKeyPressed
+    }                                        
 
-    private void BTCambiarDatoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCambiarDatoActionPerformed
+    private void BTCambiarDatoActionPerformed(java.awt.event.ActionEvent evt) {                                              
         cambiarDatoSingular(LabelCambiarDato.getText());
         VistaCambiarDato.setVisible(false);
-    }//GEN-LAST:event_BTCambiarDatoActionPerformed
+    }                                             
 
-    private void jBTBuscarLProductosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTBuscarLProductosMouseClicked
+    private void jBTBuscarLProductosMouseClicked(java.awt.event.MouseEvent evt) {                                                 
         VistaListaProducto.requestFocus();
-    }//GEN-LAST:event_jBTBuscarLProductosMouseClicked
+    }                                                
 
-    private void jBTBuscarLProveedoresMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTBuscarLProveedoresMouseClicked
+    private void jBTBuscarLProveedoresMouseClicked(java.awt.event.MouseEvent evt) {                                                   
         VistaListaProveedor.requestFocus();
-    }//GEN-LAST:event_jBTBuscarLProveedoresMouseClicked
+    }                                                  
 
-    private void jBTBuscarLClientesMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jBTBuscarLClientesMouseClicked
+    private void jBTBuscarLClientesMouseClicked(java.awt.event.MouseEvent evt) {                                                
         VistaListaCliente.requestFocus();
-    }//GEN-LAST:event_jBTBuscarLClientesMouseClicked
+    }                                               
 
-    private void VistaProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_VistaProductoKeyPressed
+    private void VistaProductoKeyPressed(java.awt.event.KeyEvent evt) {                                         
         keyPressedListar(evt, "Producto", VistaProducto);
-    }//GEN-LAST:event_VistaProductoKeyPressed
+    }                                        
 
-    private void VistaProductoWindowActivated(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_VistaProductoWindowActivated
+    private void VistaProductoWindowActivated(java.awt.event.WindowEvent evt) {                                              
         VistaProducto.requestFocus();
-    }//GEN-LAST:event_VistaProductoWindowActivated
+    }                                             
 
-    private void jBTSalirListaClientes1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTSalirListaClientes1ActionPerformed
+    private void jBTSalirListaClientes1ActionPerformed(java.awt.event.ActionEvent evt) {                                                       
         VistaProducto.setVisible(false);
-    }//GEN-LAST:event_jBTSalirListaClientes1ActionPerformed
+    }                                                      
 
-    private void BTVPCambiarCodigoProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarCodigoProductoActionPerformed
+    private void BTVPCambiarCodigoProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                          
         cambiarDatoLabel("Codigo");
-    }//GEN-LAST:event_BTVPCambiarCodigoProductoActionPerformed
+    }                                                         
 
-    private void BTVPCambiarSubRubroProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarSubRubroProductoActionPerformed
+    private void BTVPCambiarSubRubroProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                            
         cambiarDatoLabel("SubRubro");
-    }//GEN-LAST:event_BTVPCambiarSubRubroProductoActionPerformed
+    }                                                           
 
-    private void BTVPCambiarRubroProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarRubroProductoActionPerformed
+    private void BTVPCambiarRubroProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                         
         cambiarDatoLabel("Rubro");
-    }//GEN-LAST:event_BTVPCambiarRubroProductoActionPerformed
+    }                                                        
 
-    private void BTVPCambiarNombreProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarNombreProductoActionPerformed
+    private void BTVPCambiarNombreProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                          
         cambiarDatoLabel("Nombre");
-    }//GEN-LAST:event_BTVPCambiarNombreProductoActionPerformed
+    }                                                         
 
-    private void BTVPCambiarDescripcionProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarDescripcionProductoActionPerformed
+    private void BTVPCambiarDescripcionProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                               
         cambiarDatoLabel("Descripcion");
-    }//GEN-LAST:event_BTVPCambiarDescripcionProductoActionPerformed
+    }                                                              
 
-    private void BTVPCambiarPrecioProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarPrecioProductoActionPerformed
+    private void BTVPCambiarPrecioProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                          
         cambiarDatoLabel("Precio");
-    }//GEN-LAST:event_BTVPCambiarPrecioProductoActionPerformed
+    }                                                         
 
-    private void BTVPCambiarStockProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarStockProductoActionPerformed
+    private void BTVPCambiarStockProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                         
         cambiarDatoLabel("Stock");
-    }//GEN-LAST:event_BTVPCambiarStockProductoActionPerformed
+    }                                                        
 
-    private void BTVPCambiarCodigoProvProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTVPCambiarCodigoProvProductoActionPerformed
+    private void BTVPCambiarCodigoProvProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                              
         cambiarDatoLabel("Codigo Proveedor");
-    }//GEN-LAST:event_BTVPCambiarCodigoProvProductoActionPerformed
+    }                                                             
 
-    private void BTCancelarCambiosVistaProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTCancelarCambiosVistaProductoActionPerformed
+    private void BTCancelarCambiosVistaProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                               
         VistaProducto.setVisible(false);
-    }//GEN-LAST:event_BTCancelarCambiosVistaProductoActionPerformed
+    }                                                              
 
-    private void BTAceptarCambiosVistaProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BTAceptarCambiosVistaProductoActionPerformed
+    private void BTAceptarCambiosVistaProductoActionPerformed(java.awt.event.ActionEvent evt) {                                                              
         aceptarCambios();
         VistaProducto.setVisible(false);
-    }//GEN-LAST:event_BTAceptarCambiosVistaProductoActionPerformed
+    }                                                             
 
-    private void jButtonHistorialDePreciosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonHistorialDePreciosActionPerformed
+    private void jButtonHistorialDePreciosActionPerformed(java.awt.event.ActionEvent evt) {                                                          
         VistaHistorialDePrecio.setVisible(true);
         button.listar(jTableListaHistorialPrecio, modeloHistorialPrecio, "SELECT * FROM "+ BDListaPrecio);
-    }//GEN-LAST:event_jButtonHistorialDePreciosActionPerformed
+    }                                                         
 
-    private void TFHFechaAñoProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFHFechaAñoProductoKeyPressed
+    private void TFHFechaAñoProductoKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedListar(evt, "HPrecio", VistaHistorialDePrecio);
-    }//GEN-LAST:event_TFHFechaAñoProductoKeyPressed
+    }                                              
 
-    private void TFHFechaMesProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFHFechaMesProductoKeyPressed
+    private void TFHFechaMesProductoKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedListar(evt, "HPrecio", VistaHistorialDePrecio);
-    }//GEN-LAST:event_TFHFechaMesProductoKeyPressed
+    }                                              
 
-    private void TFHFechaDiaProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFHFechaDiaProductoKeyPressed
+    private void TFHFechaDiaProductoKeyPressed(java.awt.event.KeyEvent evt) {                                               
         keyPressedListar(evt, "HPrecio", VistaHistorialDePrecio);
-    }//GEN-LAST:event_TFHFechaDiaProductoKeyPressed
+    }                                              
 
-    private void jButtonSalirHistorialPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonSalirHistorialPrecioActionPerformed
+    private void jButtonSalirHistorialPrecioActionPerformed(java.awt.event.ActionEvent evt) {                                                            
         VistaHistorialDePrecio.setVisible(false);
-    }//GEN-LAST:event_jButtonSalirHistorialPrecioActionPerformed
+    }                                                           
 
-    private void TFHPrecioProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFHPrecioProductoKeyPressed
+    private void TFHPrecioProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedListar(evt, "HPrecio", VistaHistorialDePrecio);
-    }//GEN-LAST:event_TFHPrecioProductoKeyPressed
+    }                                            
 
-    private void TFHCodigoProductoKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_TFHCodigoProductoKeyPressed
+    private void TFHCodigoProductoKeyPressed(java.awt.event.KeyEvent evt) {                                             
         keyPressedListar(evt, "HPrecio", VistaHistorialDePrecio);
-    }//GEN-LAST:event_TFHCodigoProductoKeyPressed
+    }                                            
 
-    private void jBTBuscarHLPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTBuscarHLPrecioActionPerformed
+    private void jBTBuscarHLPrecioActionPerformed(java.awt.event.ActionEvent evt) {                                                  
         button.listar(jTableListaHistorialPrecio, modeloHistorialPrecio, sentencia("HPrecio"));
-    }//GEN-LAST:event_jBTBuscarHLPrecioActionPerformed
+    }                                                 
 
-    private void jBTAgregarProductoCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarProductoCancelarActionPerformed
+    private void jBTAgregarProductoCancelarActionPerformed(java.awt.event.ActionEvent evt) {                                                           
         VistaAgregarProducto.setVisible(false);
         button.vaciarTabla(jTableAgregarProducto,modeloAddProducto);
-    }//GEN-LAST:event_jBTAgregarProductoCancelarActionPerformed
+    }                                                          
 
-    private void jBTAgregarProductoAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTAgregarProductoAceptarActionPerformed
+    private void jBTAgregarProductoAceptarActionPerformed(java.awt.event.ActionEvent evt) {                                                          
         if (JOptionPane.showConfirmDialog(null, "¿Desea realmente agregar estos datos?",
                 "Confirmacion", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION){
             for (int f = 0; f < modeloAddProducto.getRowCount();f++){//codigo, nombre, precio, stock, codprov, rubro, subrubro, desc, fecha
@@ -2596,9 +2596,9 @@ public class VPrincipal extends javax.swing.JFrame {
                                       (String)modeloAddProducto.getValueAt(f,6), (String)modeloAddProducto.getValueAt(f,7));
             }
             }
-    }//GEN-LAST:event_jBTAgregarProductoAceptarActionPerformed
+    }                                                         
 
-    private void jTableAgregarProductoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTableAgregarProductoMouseClicked
+    private void jTableAgregarProductoMouseClicked(java.awt.event.MouseEvent evt) {                                                   
         if (evt.getClickCount() == 2) {
             String dato=String.valueOf(modeloAddProducto.getValueAt(jTableAgregarProducto.getSelectedRow(),0));
         if (JOptionPane.showConfirmDialog(null, "¿Desea eleminar este producto (cod "+dato+")? Tenga en cuenta que los codigos de los otros productos para agregar pueden cambiar",
@@ -2607,7 +2607,7 @@ public class VPrincipal extends javax.swing.JFrame {
         }
         }
         acomodarCodigoAddProducto();
-    }//GEN-LAST:event_jTableAgregarProductoMouseClicked
+    }                                                  
 
     private String sentencia(String nombreBD){
         String codigo;
@@ -2972,7 +2972,7 @@ public class VPrincipal extends javax.swing.JFrame {
         });
     }
 
-    // Variables declaration - do not modify//GEN-BEGIN:variables
+    // Variables declaration - do not modify                     
     private javax.swing.JButton BTAceptarCambiosVistaProducto;
     private javax.swing.JButton BTCambiarDato;
     private javax.swing.JButton BTCancelarCambiosVistaProducto;
@@ -3172,5 +3172,5 @@ public class VPrincipal extends javax.swing.JFrame {
     private javax.swing.JTable jTableListaPrecioProducto;
     private javax.swing.JTable jTableListaProductos;
     private javax.swing.JTable jTableListaProveedores;
-    // End of variables declaration//GEN-END:variables
+    // End of variables declaration                   
 }
