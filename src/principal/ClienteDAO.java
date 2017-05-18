@@ -19,14 +19,14 @@ public class ClienteDAO {
     private Session sesion; 
     private Transaction tx;  
 
-    public long guardaContacto(Cliente contacto) throws HibernateException 
+    public int guardaCliente(Cliente cliente) throws HibernateException 
     { 
-        long id = 0;  
+        int id = 0;  
 
         try 
         { 
             iniciaOperacion(); 
-            id = (Long) sesion.save(contacto); 
+            id = (int) sesion.save(cliente); 
             tx.commit(); 
         } catch (HibernateException he) 
         { 
@@ -40,12 +40,12 @@ public class ClienteDAO {
         return id; 
     }  
 
-    public void actualizaContacto(Cliente contacto) throws HibernateException 
+    public void actualizaCliente(Cliente cliente) throws HibernateException 
     { 
         try 
         { 
             iniciaOperacion(); 
-            sesion.update(contacto); 
+            sesion.update(cliente); 
             tx.commit(); 
         } catch (HibernateException he) 
         { 
@@ -57,12 +57,12 @@ public class ClienteDAO {
         } 
     }  
 
-    public void eliminaContacto(Cliente contacto) throws HibernateException 
+    public void eliminaCliente (Cliente cliente) throws HibernateException 
     { 
         try 
         { 
             iniciaOperacion(); 
-            sesion.delete(contacto); 
+            sesion.delete(cliente); 
             tx.commit(); 
         } catch (HibernateException he) 
         { 
@@ -74,13 +74,13 @@ public class ClienteDAO {
         } 
     }  
 
-    public Cliente obtenContacto(long idContacto) throws HibernateException 
+    public Cliente obtenContacto(int codCliente) throws HibernateException 
     { 
         Cliente cliente = null;  
         try 
         { 
             iniciaOperacion(); 
-            cliente = (Cliente) sesion.get(Cliente.class, idContacto); 
+            cliente = (Cliente) sesion.get(Cliente.class, codCliente); 
         } finally 
         { 
             sesion.close(); 
