@@ -76,7 +76,6 @@ public class Boton {
               preparedStatement = connection.prepareStatement("INSERT INTO "+BDProducto+" VALUES (?,?,?,?,?,?,?,?,?,?,?)");
               preparedStatement.setString(1, nombre);
               preparedStatement.setString(2, descripcion);
-              System.out.println("hola");
               preparedStatement.setString(3, fechaDeHoy());
               preparedStatement.setString(4, precio);
               preparedStatement.setString(5, codigo);
