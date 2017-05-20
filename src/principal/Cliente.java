@@ -23,7 +23,8 @@ public class Cliente {
         this.saldo = 0;
         this.deuda = 0;
     }
-
+    
+    public Cliente(){}
     
     
     public String getNombre() {

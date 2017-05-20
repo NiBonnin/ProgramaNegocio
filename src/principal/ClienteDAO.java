@@ -6,7 +6,6 @@
 package principal;
 
 import java.util.List;
-
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
@@ -17,7 +16,7 @@ import org.hibernate.Transaction;
  */
 
 public class ClienteDAO {  
-    private Session sesion; 
+    private Session session; 
     private Transaction tx;  
 
     public int guardaCliente(Cliente cliente) throws HibernateException 
@@ -27,7 +26,7 @@ public class ClienteDAO {
         try 
         { 
             iniciaOperacion(); 
-            id = (int) sesion.save(cliente); 
+            id = (int) session.save(cliente); 
             tx.commit(); 
         } catch (HibernateException he) 
         { 
@@ -35,7 +34,7 @@ public class ClienteDAO {
             throw he; 
         } finally 
         { 
-            sesion.close(); 
+            session.close(); 
         }  
 
         return id; 
@@ -46,7 +45,7 @@ public class ClienteDAO {
         try 
         { 
             iniciaOperacion(); 
-            sesion.update(cliente); 
+            session.update(cliente); 
             tx.commit(); 
         } catch (HibernateException he) 
         { 
@@ -54,7 +53,7 @@ public class ClienteDAO {
             throw he; 
         } finally 
         { 
-            sesion.close(); 
+            session.close(); 
         } 
     }  
 
@@ -63,7 +62,7 @@ public class ClienteDAO {
         try 
         { 
             iniciaOperacion(); 
-            sesion.delete(cliente); 
+            session.delete(cliente); 
             tx.commit(); 
         } catch (HibernateException he) 
         { 
@@ -71,7 +70,7 @@ public class ClienteDAO {
             throw he; 
         } finally 
         { 
-            sesion.close(); 
+            session.close(); 
         } 
     }  
 
@@ -81,15 +80,15 @@ public class ClienteDAO {
         try 
         { 
             iniciaOperacion(); 
-            cliente = (Cliente) sesion.get(Cliente.class, codCliente); 
+            cliente = (Cliente) session.get(Cliente.class, codCliente); 
         } finally 
         { 
-            sesion.close(); 
+            session.close(); 
         }  
 
         return cliente; 
     }  
-
+    
     public List<Cliente> obtenListaContactos() throws HibernateException 
     { 
         List<Cliente> listaContactos = null;  
@@ -97,10 +96,10 @@ public class ClienteDAO {
         try 
         { 
             iniciaOperacion(); 
-            listaContactos = sesion.createQuery("from Contacto").list(); 
+            listaContactos = session.createQuery("from Cliente").list(); //tiene q ser el mismo nombre que tiene el cliente.hbm.xml
         } finally 
         { 
-            sesion.close(); 
+            session.close(); 
         }  
 
         return listaContactos; 
@@ -108,8 +107,8 @@ public class ClienteDAO {
 
     private void iniciaOperacion() throws HibernateException 
     { 
-        sesion = HibernateUtil.getSessionFactory().openSession(); 
-        tx = sesion.beginTransaction(); 
+        session = HibernateUtil.getSessionFactory().openSession(); 
+        tx = session.beginTransaction(); 
     }  
 
     private void manejaExcepcion(HibernateException he) throws HibernateException 
