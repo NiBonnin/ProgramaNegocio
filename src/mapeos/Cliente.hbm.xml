@@ -4,16 +4,16 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <class name="hibernatenormal.Cliente" table="CLIENTE">
+    <class name="principal.Cliente" table="CLIENTE">
         <id name="codigo" column="codigo">
             <generator class="identity" />
         </id>
-        <property name="nombre" type="string"/>
-        <property name="direccion" type="string"/>
-        <property name="telefono" type="string"/>
-        <property name="cuit" type="string"/>
-        <property name="codigoPostal" type="int"/>
-        <property name="saldo" type="double"/>
-        <property name="deuda" type="double"/> 
+        <property name="nombre" type="string" column="nombre"/>
+        <property name="direccion" type="string" column="direccion"/>
+        <property name="telefono" type="string" column="telefono"/>
+        <property name="cuit" type="string" column="cuit"/>
+        <property name="codigoPostal" type="int" column="cp"/>
+        <property name="saldo" type="double" column="saldo"/>
+        <property name="deuda" type="double"  column="deuda"/> 
     </class>
 </hibernate-mapping>

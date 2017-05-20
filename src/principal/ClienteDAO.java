@@ -15,6 +15,7 @@ import org.hibernate.Transaction;
  *
  * @author Nico
  */
+
 public class ClienteDAO {  
     private Session sesion; 
     private Transaction tx;  
@@ -76,7 +77,7 @@ public class ClienteDAO {
 
     public Cliente obtenContacto(int codCliente) throws HibernateException 
     { 
-        Cliente cliente = null;  
+       Cliente cliente = null;  
         try 
         { 
             iniciaOperacion(); 

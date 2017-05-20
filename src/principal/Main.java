@@ -18,10 +18,9 @@ public class Main {
      */
     public static void main(String[] args) {
  
-
+        int idAEliminar = 0;
         ClienteDAO clienteDAO = new ClienteDAO(); 
-        Cliente contactoRecuperado = null;  
-        int idAEliminar = 0;  
+        Cliente contactoRecuperado;
 
         //Creamos tes instancias de Contacto  (String nombre, String direccion, int codigoPostal, String telefono, String cuit)
         Cliente cliente1 = new Cliente("Pedro", "dr clark 385", 3260, "86484","15531"); 
@@ -30,26 +29,26 @@ public class Main {
 
         //Guardamos las tres instancias, guardamos el id del contacto1 para usarlo posteriormente 
         idAEliminar = clienteDAO.guardaCliente(cliente1); 
-        clienteDAO.guardaCliente(cliente2); 
-        clienteDAO.guardaCliente(cliente3);  
-
+        clienteDAO.guardaCliente(cliente2);
+        clienteDAO.guardaCliente(cliente3);
+        
         //Modificamos el contacto 2 y lo actualizamos 
-        cliente2.setNombre("Nuevo Contacto 2"); 
-        clienteDAO.actualizaCliente(cliente2);  
-
+        cliente2.setNombre("Nuevo Contcto 2");
+        clienteDAO.actualizaCliente(cliente2);
+        
         //Recuperamos el contacto1 de la base de datos 
-        contactoRecuperado = clienteDAO.obtenContacto(idAEliminar); 
-        System.out.println("Recuperamos a " + contactoRecuperado.getNombre());  
+        contactoRecuperado = clienteDAO.obtenContacto(idAEliminar);
+        System.out.println("Recuperamos a " + contactoRecuperado.getNombre());
 
-        //Eliminamos al contactoRecuperado (que es el contacto3) 
-        clienteDAO.eliminaCliente(contactoRecuperado);  
+        //Eliminamos al contactoRecuperado (que es el contacto3)
+        clienteDAO.eliminaCliente(contactoRecuperado);
 
-        //Obtenemos la lista de contactos que quedan en la base de datos y la mostramos 
-        List<Cliente> listaContactos = clienteDAO.obtenListaContactos();  
-        System.out.println("Hay " + listaContactos.size() + " clientes en la base de datos");  
+        //Obtenemos la lista de contactos que quedan en la base de datos y la mostramos
+        List<Cliente> listaContactos = clienteDAO.obtenListaContactos();
+        System.out.println("Hay " + listaContactos.size() + " clientes en la base de datos");
 
-        for(Cliente c : listaContactos) 
-        {System.out.println("-> " + c.getNombre()); 
+        for(Cliente c : listaContactos)
+        {System.out.println("-> " + c.getNombre());
         } 
     }     
 }
