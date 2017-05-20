@@ -96,7 +96,7 @@ public class ClienteDAO {
         try 
         { 
             iniciaOperacion(); 
-            listaContactos = session.createQuery("from Cliente").list(); //tiene q ser el mismo nombre que tiene el cliente.hbm.xml
+            listaContactos = session.createQuery("from Cliente").list(); //tiene q ser el mismo nombre que tiene el cliente.hbm.xml    es case sensitive
         } finally 
         { 
             session.close(); 
